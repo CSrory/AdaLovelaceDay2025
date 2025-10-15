@@ -352,6 +352,9 @@ function shuffle(){
   tiles.forEach((t,i)=>{ t.dataset.idx = idxs[i]; applyTileVisual(t); });
   moves=0; movesEl.textContent=moves; stateEl.textContent='مبعثر';
   startTimer();
+check();
+  if(gameOver)shuffle();
+  
 }
 
 // Interaction
