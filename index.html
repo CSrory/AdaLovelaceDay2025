@@ -174,6 +174,7 @@
 <div class="controls">
   <button id="start" class="btn">▶️ بدء</button>
   <button id="shuffle" class="btn secondary">🔀 خلط</button>
+  <button id="reset" class="btn secondary">🔁 إعادة</button>
 </div>
 
 <!-- Board + meter -->
@@ -228,6 +229,7 @@ const ROWS = 4, COLS = 5; // ثابت 4×5
 const board = document.getElementById('board');
 const startBtn = document.getElementById('start');
 const shuffleBtn = document.getElementById('shuffle');
+const resetBtn = document.getElementById('reset');
 const movesEl = document.getElementById('moves');
 const timeEl = document.getElementById('time');
 const stateEl = document.getElementById('state');
@@ -350,9 +352,6 @@ function shuffle(){
   tiles.forEach((t,i)=>{ t.dataset.idx = idxs[i]; applyTileVisual(t); });
   moves=0; movesEl.textContent=moves; stateEl.textContent='مبعثر';
   startTimer();
-check();
-  if(gameOver)shuffle();
-  
 }
 
 // Interaction
