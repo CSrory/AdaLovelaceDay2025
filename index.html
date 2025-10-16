@@ -428,6 +428,9 @@ retryLose.onclick = ()=>{ if(!playerName){ requireNameThenStart(); return; } cre
 // Boot
 img.onload = ()=>{ create(); };
 img.src = IMG_URL;
+  window.addEventListener('load',() => {
+    startGame();
+  });
 </script>
 </body>
 </html>
