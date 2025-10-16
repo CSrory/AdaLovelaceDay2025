@@ -174,6 +174,7 @@
 <div class="controls">
   <button id="start" class="btn">▶️ بدء</button>
   <button id="shuffle" class="btn secondary">🔀 خلط</button>
+  <button id="reset" class="btn secondary">style=display:none</button>
 </div>
 
 <!-- Board + meter -->
@@ -428,9 +429,6 @@ retryLose.onclick = ()=>{ if(!playerName){ requireNameThenStart(); return; } cre
 // Boot
 img.onload = ()=>{ create(); };
 img.src = IMG_URL;
-  window.addEventListener('load',() => {
-    startGame();
-  });
 </script>
 </body>
 </html>
